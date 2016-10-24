@@ -46,6 +46,8 @@ class BaseChar(object):
         #set default hitdie
         self.hitdie = 6
         
+        
+        #set health
         self.setHealth()
        
         
@@ -55,6 +57,8 @@ class BaseChar(object):
         return self.race + ' ' + self.charclass + ' ' + self.name
     
     def levelUpHealth(self):
+        
+        #allow character to lose health?
         self.health += Dice.dn(self.hitdie)
         self.health += (self.attributes['Con'] - 5)
         
@@ -62,9 +66,7 @@ class BaseChar(object):
         self.levelUpHealth()
         
     def setHealth(self):
-        #set health
-        #allow character to lose health?
         self.health = self.basehealth
-        for x in range(0, self.level):
+        for _ in range(0, self.level):
             self.levelUpHealth()
         
