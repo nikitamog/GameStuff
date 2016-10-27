@@ -32,5 +32,8 @@ def d100():
     return random.randint(1, 100)
     
 def dn(n):
+    '''
+    Roll dice with N sides
+    '''
     return random.randint(1, n)
         
