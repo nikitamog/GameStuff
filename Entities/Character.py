@@ -63,6 +63,7 @@ class BaseChar(object):
         self.health += (self.attributes['Con'] - 5)
         
     def levelUp(self):
+        ++self.level
         self.levelUpHealth()
         
     def setHealth(self):

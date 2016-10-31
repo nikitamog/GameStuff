@@ -63,7 +63,17 @@ class FootWear(Armor):
     def __init__(self, armor=0, worth=0, description=''):
         Armor.__init__(self, armor, worth, description)
         
+class Gloves(Armor):
+    
+    def __init__(self, armor=0, worth=0, description=''):
+        Armor.__init__(self, armor, worth, description)
+        
 class Amulet(Item):
+    #add stat effect
+    def __init__(self, armor=0, worth=0, description=''):
+        Item.__init__(self, worth, description)
+        
+class Ring(Item):
     #add stat effect
     def __init__(self, armor=0, worth=0, description=''):
         Item.__init__(self, worth, description)
